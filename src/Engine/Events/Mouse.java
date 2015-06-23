@@ -1,4 +1,4 @@
-package Events;
+package Engine.Events;
 
 import java.awt.*;
 import java.awt.event.InputEvent;
@@ -65,5 +65,4 @@ public class Mouse {
             }
         }
     }
-
 }

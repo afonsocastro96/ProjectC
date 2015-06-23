@@ -1,4 +1,4 @@
-package Main;
+package Engine.Main;
 
 public class Main {
 
@@ -6,17 +6,17 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("Hello World!");
-
         sm = new StateManager();
 
-        while(true) { //quando decidir uma condicao de paragem, provavelmente clicar numa tecla, coloco aqui
+        while(sm.getState() != StateManager.OPTIONS) {
             try {
-                Thread.sleep(100);
+                Thread.sleep(1000/60);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
 
             sm.update();
         }
+
     }
 }

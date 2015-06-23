@@ -1,6 +1,6 @@
-package States;
+package Engine.States;
 
-public class ExitGame extends State{
+public class Play extends State{
     @Override
     public void init() {
 

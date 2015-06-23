@@ -1,18 +1,24 @@
-package Main;
+package Engine.Main;
 
-import States.*;
+import Engine.States.*;
 
 public class StateManager {
     private State state;
+    private int currentState;
 
-    private static final int IDLE = 0;
-    private static final int NEWGAME = 1;
-    private static final int PLAY = 2;
-    private static final int EXITGAME = 3;
-    private static final int MOUSECALIBRATION = 4;
+    public static final int IDLE = 0;
+    public static final int NEWGAME = 1;
+    public static final int PLAY = 2;
+    public static final int EXITGAME = 3;
+    public static final int OPTIONS = 4;
 
+    public StateManager(){
+        setState(OPTIONS);
+    }
 
-
+    public int getState(){
+        return currentState;
+    }
     public void setState(int newState){
         switch (newState) {
             case IDLE:
@@ -27,10 +33,11 @@ public class StateManager {
             case EXITGAME:
                 state = new ExitGame();
                 break;
-            case MOUSECALIBRATION:
-                state = new MouseCalibration();
+            case OPTIONS:
+                state = new Options();
                 break;
         }
+        currentState = newState;
     }
 
     public void update(){

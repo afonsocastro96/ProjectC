@@ -1,4 +1,4 @@
-package States;
+package Engine.States;
 
 public class NewGame extends State {
 

@@ -1,4 +1,4 @@
-package States;
+package Engine.States;
 
 public abstract class State {
     public abstract void init();
