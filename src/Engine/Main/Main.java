@@ -5,6 +5,7 @@ public class Main {
     static StateManager sm;
 
     public static void main(String[] args) {
+
         System.out.println("Hello World!");
         sm = new StateManager();
 

@@ -24,24 +24,17 @@ public class Pixel {
     }
 
     public static void getPixelColor(Point p) {
-        try {
-            r = new Robot();
+        Color color = r.getPixelColor(p.x,p.y);
 
-            //
-            // The the pixel color information at 20, 20
-            //
-            Color color = r.getPixelColor(p.x,p.y);
+        //
+        // Print the RGB information of the pixel color
+        //
+        System.out.println("Red   = " + color.getRed());
+        System.out.println("Green = " + color.getGreen());
+        System.out.println("Blue  = " + color.getBlue());
+        System.out.println();
 
-            //
-            // Print the RGB information of the pixel color
-            //
-            System.out.println("Red   = " + color.getRed());
-            System.out.println("Green = " + color.getGreen());
-            System.out.println("Blue  = " + color.getBlue());
-            System.out.println();
 
-        } catch (AWTException e) {
-            e.printStackTrace();
-        }
+
     }
 }
